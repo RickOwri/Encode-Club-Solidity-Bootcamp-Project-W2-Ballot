@@ -21,5 +21,8 @@ typechain-types
 cache
 artifacts
 .git
+
+# others
 .stignore
 .stfolder
+.ignorer
