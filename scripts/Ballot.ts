@@ -6,8 +6,8 @@ dotenv.config();
 // const Proposals = ["Proposal 1", "Proposal 2", "Proposal 3"];
 
 
-const ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-// const contractAddress = ethers.Wallet.createRandom();
+// const ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const ADDRESS = ethers.Wallet.createRandom();
 // const ADDRESS = contractAddress
 
 
@@ -30,6 +30,7 @@ async function main() {
 
     const lastBlock = await provider.getBlock("latest");
     console.log(`Connected to the Block number ${lastBlock?.number}`);
+    
     const signer = wallet.connect(provider);    
     const balance = await signer.getBalance();
     console.log(`Balance is ${balance} WEI`);
